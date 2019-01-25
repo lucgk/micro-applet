@@ -1,0 +1,5 @@
+<!--userInfo.wxml  个人信息页面-->
+<view class="container">
+  <view>{{text}}</view>
+  <view>{{array[0].msg}}</view>
+</view>

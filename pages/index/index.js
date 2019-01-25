@@ -3,8 +3,9 @@
 const app = getApp()
 
 Page({
+  
   data: {
-    motto: 'Hello World',
+    motto: 'My applet !',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
