@@ -1,13 +1,14 @@
 {
   "pages": [
+    "pages/personal/basic/basic",
+    "pages/index/index",
     "pages/personal/userInfo",
-    "pages/logs/logs",
-    "pages/index/index"
+    "pages/personal/contact/contact"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#000000",
-    "navigationBarTitleText": "2019新年好！",
+    "navigationBarTitleText": "正中心脏",
     "navigationBarTextStyle": "white",
     "navigationStyle": "default",
     "backgroundColor": "#ffffff"
@@ -21,12 +22,8 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
-      },
-      {
         "pagePath": "pages/personal/userInfo",
-        "text": "个人中心"
+        "text": "设置"
       }
     ]
   },

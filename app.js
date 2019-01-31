@@ -1,4 +1,5 @@
 //app.js
+var request = require('utils/request.js');
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -9,7 +10,16 @@ App({
     // 登录
     wx.login({
       success: res => {
+       // console.log(res);
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        var para = {
+            code : res.code 
+        }
+        request.postReq('/wxCert/loginByCode',para,function(res){
+          wx.setStorageSync('sessionId', res.data.data);
+        },function(res){
+              console.log(res);
+        })
       }
     })
     // 获取用户信息
@@ -31,7 +41,7 @@ App({
           })
         }
       }
-    })
+    });
   },
   globalData: {
     userInfo: null
