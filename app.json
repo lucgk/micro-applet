@@ -1,9 +1,7 @@
 {
   "pages": [
-    "pages/personal/basic/basic",
-    "pages/index/index",
-    "pages/personal/userInfo",
-    "pages/personal/contact/contact"
+    "pages/factoryInfo/factoryInfo",
+    "pages/factoryInfo/factoryDetail/factoryDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,20 +10,6 @@
     "navigationBarTextStyle": "white",
     "navigationStyle": "default",
     "backgroundColor": "#ffffff"
-  },
-  "tabBar": {
-    "color": "#000000",
-    "selectedColor": "",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "首页"
-      },
-      {
-        "pagePath": "pages/personal/userInfo",
-        "text": "设置"
-      }
-    ]
   },
   "networkTimeout": {
     "request": 10000,
