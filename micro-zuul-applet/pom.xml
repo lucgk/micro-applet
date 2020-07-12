@@ -7,22 +7,44 @@
     <groupId>micro.applets</groupId>
     <version>1.0.0</version>
   </parent>
-
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>common-applet</artifactId>
-  <packaging>pom</packaging>
+  <artifactId>micro-zuul-applet</artifactId>
+  <packaging>jar</packaging>
+
   <properties>
-    <project.finalName>common-applet</project.finalName>
+    <project.finalName>micro-zuul-applet</project.finalName>
     <assembly.filePath>assembly/</assembly.filePath>
   </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+  </dependencies>
 
 
   <build>
     <plugins>
+      <plugin>
+        <!-- 用于将整个工程 打成一个可执行 fat  jar        详见fat-packing.bat-->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>2.2.4.RELEASE</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
       <!-- 打包插件 maven-assembly-plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
+        <version>3.1.0</version>
         <configuration>
           <appendAssemblyId>false</appendAssemblyId>
           <finalName>${project.finalName}</finalName>
@@ -32,7 +54,7 @@
         </configuration>
         <executions>
           <execution>
-            <id>make-assembly</id>
+            <id>make-assembly2</id>
             <!-- 对应maven 生命周期的不同阶段 -->
             <phase>package</phase>
             <goals>
