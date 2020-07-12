@@ -1,6 +1,0 @@
-/* pages/personal/basic/basic.wxss */
-.btn_bottom {
-    position: fixed;
-    width: 94%;
-    bottom: 0;
-}
