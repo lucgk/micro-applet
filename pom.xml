@@ -1,98 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>micro.applets</groupId>
-  <artifactId>micro-applet</artifactId>
-  <version>1.0.0</version>
-  <packaging>pom</packaging>
+    <modelVersion>4.0.0</modelVersion>
 
-  <name>micro-applet</name>
-  <url>http://maven.apache.org</url>
+    <groupId>com.micro.applet</groupId>
+    <artifactId>micro-applet</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <spring-boot.version>2.4.1</spring-boot.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
 
-  <properties>
-    <project.finalName>micro-applet</project.finalName>
-    <assembly.filePath/>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <maven.deploy.skip>true</maven.deploy.skip>
-    <spring-boot.version>2.0.2.RELEASE</spring-boot.version>
-    <springfox.version>2.8.0</springfox.version>
-    <repository.id>${project.distributionManagement.snapshotRepository.id}</repository.id>
-    <repository.id>${project.distributionManagement.snapshotRepository.url}</repository.id>
-  </properties>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-dependencies</artifactId>
-        <version>${spring-boot.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
-
-  <dependencies>
-  </dependencies>
-
-  <distributionManagement>
-    <repository>
-      <id>nexus_releases</id>
-      <url>http://192.168.123.47:8686/nexus/content/repositories/releases</url>
-    </repository>
-    <snapshotRepository>
-      <id>nexus_snapshots</id>
-      <url>http://192.168.123.47:8686/nexus/content/repositories/snapshots</url>
-      <uniqueVersion>false</uniqueVersion>
-    </snapshotRepository>
-  </distributionManagement>
-
-
-  <modules>
-    <module>common-applet</module>
-    <module>micro-zuul-applet</module>
-    <module>micro-timer-applet</module>
-    <module>micro-system-applet</module>
-    <module>micro-upload-download-applet</module>
-    <module>micro-picture-applet</module>
+    </dependencyManagement>
+    <modules>
+        <module>micro-gateway-applet</module>
+        <module>micro-system-applet</module>
   </modules>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-          <encoding>UTF-8</encoding>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.1.0</version>
-        <configuration>
-          <appendAssemblyId>false</appendAssemblyId>
-          <finalName>${project.finalName}}</finalName>
-          <descriptors>
-            <descriptor>${assembly.filePath}package.xml</descriptor>
-          </descriptors>
-        </configuration>
-        <executions>
-          <execution>
-            <id>make-assembly</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
-
 </project>

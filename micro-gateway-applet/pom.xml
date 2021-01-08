@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.micro.applet</groupId>
@@ -7,9 +8,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.micro.applet</groupId>
-    <artifactId>micro-system-applet</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>micro-system-applet</name>
+    <artifactId>micro-gateway-applet</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>micro-gateway-applet</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

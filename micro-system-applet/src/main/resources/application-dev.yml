@@ -1,0 +1,11 @@
+dubbo:
+  application:
+    name: micro-system-applet
+  scan:
+    base-packages:
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    id: my-registry
+    address: nacos://10.10.11.2:8848
