@@ -1,3 +1,19 @@
+server:
+  servlet:
+    context-path: /system
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://10.10.11.2:13306/applet?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+
+mybatis:
+  mapper-locations: classpath:/mybatis/**/*Mapper.xml
+  type-aliases-package: com.micro.applet.system.entity
+
 dubbo:
   application:
     name: micro-system-applet
@@ -5,7 +21,7 @@ dubbo:
     base-packages:
   protocol:
     name: dubbo
-    port: -1
+    port: 21882
   registry:
     id: my-registry
     address: nacos://10.10.11.2:8848

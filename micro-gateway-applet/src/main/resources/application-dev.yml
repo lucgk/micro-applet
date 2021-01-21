@@ -1,3 +1,8 @@
+server:
+  servlet:
+    context-path: /gateway
+  port: 8081
+
 dubbo:
   application:
     name: micro-gateway-applet
@@ -5,7 +10,7 @@ dubbo:
     base-packages:
   protocol:
     name: dubbo
-    port: -1
+    port: 21881
   registry:
     id: my-registry
     address: nacos://10.10.11.2:8848
