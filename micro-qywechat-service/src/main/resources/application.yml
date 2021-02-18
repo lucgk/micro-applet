@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: dev
+  cache:
+    type: ehcache
+
+## prometheus
+## http://localhost:8080/system/actuator/prometheus
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

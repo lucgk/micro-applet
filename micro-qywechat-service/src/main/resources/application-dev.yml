@@ -1,0 +1,4 @@
+server:
+  servlet:
+    context-path: /qywechat
+  port: 8081

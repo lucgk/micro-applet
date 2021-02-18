@@ -20,7 +20,7 @@ import java.util.List;
 @Slf4j
 @Api(value = "/api/user",tags = {"UserController"})
 @Controller
-@RequestMapping("/api/user/")
+@RequestMapping("/api/system/user/")
 public class UserController {
 
     @Autowired
