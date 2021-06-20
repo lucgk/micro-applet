@@ -17,6 +17,7 @@
         <common-lang3.version>3.8.1</common-lang3.version>
         <guava.version>27.0.1-jre</guava.version>
         <fastjson.version>1.2.74</fastjson.version>
+        <common-codec.version>1.11</common-codec.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -118,6 +119,16 @@
                 <version>${fastjson.version}</version>
             </dependency>
 
+
+            <!-- AES 加解密所需jar start -->
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${common-codec.version}</version>
+            </dependency>
+            <!-- AES 加解密所需jar end -->
+
+
         </dependencies>
 
     </dependencyManagement>
@@ -126,13 +137,14 @@
         <module>micro-system-applet</module>
         <module>micro-service-applet</module>
         <module>micro-qywechat-service</module>
+      <module>micro-callback-web</module>
+        <module>appium-client</module>
     </modules>
 
 
     <build>
         <pluginManagement>
             <plugins>
-                <!--跳过测试-->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>

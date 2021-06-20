@@ -1,0 +1,4 @@
+server:
+  servlet:
+    context-path: /callback
+  port: 8081

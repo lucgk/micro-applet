@@ -2,3 +2,6 @@ server:
   servlet:
     context-path: /qywechat
   port: 8081
+
+ffmpeg:
+  path: D:\LH
